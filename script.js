@@ -55,10 +55,15 @@ console.log(validateProductSKU("123-ABCDEF"));
 */
 
 // Exercise 3 - there is some cinfusion here still
+//https://www.tutorialspoint.com/javascript/javascript_setinterval.htm
+// I had to copy the syntax for the function from above website, regular one doesnt work
+//COnfusion solved
+/*
 function processOrder(orderId, callback, delay) {
   console.log(`The order received ${orderId}, beginning with proceessing.`);
 
-  setTimeout(callback(orderId));
+  //This is wrong syntax, the one in line immediatelz below is right, but it cn be used as we only want single trigger setTimeout(callback(orderId));
+  setTimeout(callback, 0, orderId);
 }
 
 processOrder(
@@ -71,19 +76,15 @@ processOrder(
   },
   10000
 );
+*/
 
-/*
 //Exercise 4
+//https://www.tutorialspoint.com/javascript/javascript_setinterval.htm
+// I had to copy the syntax for the function from above website, regular one doesnt work
 function monitorInventory(productId, callback, delay) {
   console.log(`The order received ${productId}, beginning with proceessing.`);
-
-  //   setInterval(callback(productId), delay);
-  let stock = 40;
-  setInterval(callback(stock), delay);
-//   setInterval((callback) => {
-//     console.log(`Order shipped: ${productId}`);
-//   }, delay);
+  let stock = 5;
+  setInterval(callback, delay, stock);
 }
 
 monitorInventory("PROD123", (stock) => console.log(stock), 2000);
-*/
