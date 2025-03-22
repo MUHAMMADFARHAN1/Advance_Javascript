@@ -59,10 +59,6 @@ function processOrder(orderId, callback, delay) {
   console.log(`The order received ${orderId}, beginning with proceessing.`);
 
   setTimeout(callback(orderId));
-
-  //   setTimeout(() => {
-  //     console.log(`Order shipped: ${orderId}`);
-  //   }, delay); 
 }
 
 processOrder(
