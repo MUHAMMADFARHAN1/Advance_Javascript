@@ -1,5 +1,5 @@
 /*
-Exercise 1 Completed!
+//  Exercise 1 Completed!
 
 function calculateDateDifference(date_1, date_2) {
   let date1 = new Date(date_1);
@@ -15,21 +15,26 @@ function calculateDateDifference(date_1, date_2) {
   let minutesTwo = date2.getTime() / (1000 * 60);
 
   if (date1 > date2) {
-    console.log("The difference in days is: " + (daysOne - daysTwo));
+
     console.log(
-      "The difference in hours is: " + Math.round(hoursOne - hoursTwo)
-    );
-    console.log(
-      "The difference in minutes is: " +
-        Math.round(minutesOne - minutesTwoinutesTwo)
+      daysOne -
+        daysTwo +
+        " days, " +
+        Math.round(hoursOne - hoursTwo) +
+        " hours, " +
+        Math.round(minutesOne - minutesTwo) +
+        " minutes"
     );
   } else {
-    console.log("The difference in days is: " + (daysTwo - daysOne));
+
     console.log(
-      "The difference in hours is: " + Math.round(hoursTwo - hoursOne)
-    );
-    console.log(
-      "The difference in minutes is: " + Math.round(minutesTwo - minutesOne)
+      daysTwo -
+        daysOne +
+        " days, " +
+        Math.round(hoursTwo - hoursOne) +
+        " hours, " +
+        Math.round(minutesTwo - minutesOne) +
+        " minutes"
     );
   }
 }
