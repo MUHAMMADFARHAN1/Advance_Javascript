@@ -41,3 +41,15 @@ function calculateDateDifference(date_1, date_2) {
 
 calculateDateDifference("2023-10-05 14:30:45", "2023-10-10 10:15:30");
 */
+// ^[A-Za-z]{3}-\d{6}$
+/*
+function validateProductSKU(input) {
+  let regexCheck = /^[A-Za-z]{3}-\d{6}$/;
+  let test = regexCheck.test(input);
+  //   console.log("The result is: " + test);
+  return test;
+}
+console.log(validateProductSKU("ABC-123456"));
+console.log(validateProductSKU("123-ABCDEF"));
+// validateProductSKU("ABC-123456");
+*/
