@@ -53,3 +53,25 @@ console.log(validateProductSKU("ABC-123456"));
 console.log(validateProductSKU("123-ABCDEF"));
 // validateProductSKU("ABC-123456");
 */
+
+// Exercise 3 - there is some cinfusion here still
+function processOrder(orderId, callback, delay) {
+  console.log(`The order received ${orderId}, beginning with proceessing.`);
+
+  setTimeout(callback(orderId), delay);
+
+  setTimeout(() => {
+    console.log(`Order shipped: ${orderId}`);
+  }, delay);
+}
+
+processOrder(
+  "ORDER123",
+  (order) => {
+    console.log(`Payment confirmed for order: ${order}`);
+    setTimeout(() => {
+      console.log(`Order shipped: ${order}`);
+    }, 2000);
+  },
+  10000
+);
