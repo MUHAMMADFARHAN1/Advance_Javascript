@@ -58,11 +58,11 @@ console.log(validateProductSKU("123-ABCDEF"));
 function processOrder(orderId, callback, delay) {
   console.log(`The order received ${orderId}, beginning with proceessing.`);
 
-  setTimeout(callback(orderId), delay);
+  setTimeout(callback(orderId));
 
-  setTimeout(() => {
-    console.log(`Order shipped: ${orderId}`);
-  }, delay);
+  //   setTimeout(() => {
+  //     console.log(`Order shipped: ${orderId}`);
+  //   }, delay); 
 }
 
 processOrder(
@@ -75,3 +75,19 @@ processOrder(
   },
   10000
 );
+
+/*
+//Exercise 4
+function monitorInventory(productId, callback, delay) {
+  console.log(`The order received ${productId}, beginning with proceessing.`);
+
+  //   setInterval(callback(productId), delay);
+  let stock = 40;
+  setInterval(callback(stock), delay);
+//   setInterval((callback) => {
+//     console.log(`Order shipped: ${productId}`);
+//   }, delay);
+}
+
+monitorInventory("PROD123", (stock) => console.log(stock), 2000);
+*/
