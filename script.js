@@ -78,6 +78,7 @@ processOrder(
 );
 */
 
+/*
 //Exercise 4
 //https://www.tutorialspoint.com/javascript/javascript_setinterval.htm
 // I had to copy the syntax for the function from above website, regular one doesnt work
@@ -88,3 +89,4 @@ function monitorInventory(productId, callback, delay) {
 }
 
 monitorInventory("PROD123", (stock) => console.log(stock), 2000);
+*/
